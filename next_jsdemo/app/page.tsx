@@ -56,7 +56,7 @@ export default function Home() {
           </Link>
 
           <a
-            href="https://github.com"
+            href="https://github.com/Ifeoyewole"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-7 py-3.5 text-sm font-semibold text-gray-300 transition-all duration-300 hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
