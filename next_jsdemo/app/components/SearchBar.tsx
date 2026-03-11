@@ -16,7 +16,6 @@ export default function SearchBar() {
 
     return (
         <>
-            {/* Search input */}
             <div className="relative mx-auto mb-10 max-w-md">
                 <svg
                     className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"
@@ -35,14 +34,13 @@ export default function SearchBar() {
                 </svg>
                 <input
                     type="text"
-                    placeholder="Search resources…"
+                    placeholder="Search resources..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
-                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-3 pl-11 pr-4 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-violet-500/50 focus:bg-violet-500/[0.04]"
+                    className="w-full rounded-xl border border-white/10 bg-white/[0.04] py-3 pl-11 pr-4 text-sm text-white placeholder:text-gray-500 outline-none transition-colors focus:border-amber-600/60 focus:bg-amber-700/[0.06]"
                 />
             </div>
 
-            {/* Results */}
             {filtered.length > 0 ? (
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {filtered.map((resource) => (
@@ -63,7 +61,7 @@ export default function SearchBar() {
                     </p>
                     <button
                         onClick={() => setQuery("")}
-                        className="mt-2 rounded-lg bg-violet-500/15 px-4 py-2 text-sm font-medium text-violet-400 hover:bg-violet-500/25 transition-colors"
+                        className="mt-2 rounded-lg bg-amber-700/20 px-4 py-2 text-sm font-medium text-amber-300 hover:bg-amber-700/30 transition-colors"
                     >
                         Clear search
                     </button>

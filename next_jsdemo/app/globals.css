@@ -22,20 +22,26 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Gradient text utility */
+.text-accent {
+  color: #f59e0b;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .gradient-text {
-  background: linear-gradient(135deg, #8b5cf6, #d946ef, #ec4899);
+  background: linear-gradient(135deg, #f59e0b, #d97706, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Glow effect */
 .glow {
-  box-shadow: 0 0 60px -15px rgba(139, 92, 246, 0.35);
+  box-shadow: 0 0 60px -15px rgba(217, 119, 6, 0.35);
 }
 
-/* Animated gradient border */
 @keyframes gradient-shift {
   0%,
   100% {
@@ -51,7 +57,6 @@ body {
   animation: gradient-shift 6s ease infinite;
 }
 
-/* Floating animation */
 @keyframes float {
   0%,
   100% {
@@ -66,7 +71,6 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Skeleton loading pulse */
 @keyframes skeleton-pulse {
   0%,
   100% {

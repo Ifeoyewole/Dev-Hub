@@ -35,10 +35,9 @@ export default async function ResourcePage({ params }: PageProps) {
 
     return (
         <section className="mx-auto max-w-3xl px-6 py-16">
-            {/* Back button */}
             <Link
                 href="/resources"
-                className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-violet-400 transition-colors mb-10"
+                className="inline-flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors mb-10"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,27 +56,23 @@ export default async function ResourcePage({ params }: PageProps) {
                 Back to Resources
             </Link>
 
-            {/* Card */}
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 sm:p-10">
-                {/* Category + name */}
-                <span className="inline-block rounded-full bg-violet-500/15 px-3 py-1 text-xs font-semibold text-violet-400 tracking-wide uppercase mb-4">
+                <span className="inline-block rounded-full bg-amber-700/20 px-3 py-1 text-xs font-semibold text-amber-300 tracking-wide uppercase mb-4">
                     {resource.category}
                 </span>
                 <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl gradient-text mb-4">
                     {resource.name}
                 </h1>
 
-                {/* Description */}
                 <p className="text-base leading-relaxed text-gray-400 sm:text-lg mb-8">
                     {resource.description}
                 </p>
 
-                {/* Visit link */}
                 <a
                     href={resource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/40 hover:-translate-y-0.5 animated-gradient"
+                    className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-700 to-amber-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-amber-700/30 transition-all duration-300 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5 animated-gradient"
                 >
                     Visit {resource.name}
                     <svg

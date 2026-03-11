@@ -3,14 +3,11 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative flex min-h-[calc(100vh-65px)] flex-col items-center justify-center overflow-hidden px-6">
-      {/* Background decorations */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {/* Gradient orbs */}
-        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-violet-600/20 blur-[128px] animate-float" />
-        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-fuchsia-600/20 blur-[128px] animate-float [animation-delay:1.5s]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-pink-500/10 blur-[100px]" />
+        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-amber-700/20 blur-[128px] animate-float" />
+        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-amber-500/20 blur-[128px] animate-float [animation-delay:1.5s]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-64 w-64 rounded-full bg-amber-300/10 blur-[100px]" />
 
-        {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -21,31 +18,24 @@ export default function Home() {
         />
       </div>
 
-      {/* Hero content */}
       <div className="relative z-10 flex max-w-3xl flex-col items-center gap-6 text-center">
-        {/* Badge */}
-        <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-violet-400 uppercase">
-          🚀 Open-Source Resources
+        <span className="rounded-full border border-amber-700/40 bg-amber-700/15 px-4 py-1.5 text-xs font-semibold tracking-widest text-amber-300 uppercase">
+          Open-Source Resources
         </span>
 
-        {/* Title */}
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl">
-          Your Go-To{" "}
-          <span className="gradient-text">Developer Resource</span>{" "}
-          Hub
+          Your Go-To <span className="gradient-text">Developer Resource</span> Hub
         </h1>
 
-        {/* Subtitle */}
         <p className="max-w-xl text-base leading-relaxed text-gray-400 sm:text-lg">
           Discover curated tools, frameworks, and platforms that help you ship
           faster, write cleaner code, and level up your developer workflow.
         </p>
 
-        {/* CTA buttons */}
         <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/resources"
-            className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/40 hover:-translate-y-0.5 animated-gradient"
+            className="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-700 to-amber-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-amber-700/30 transition-all duration-300 hover:shadow-xl hover:shadow-amber-600/40 hover:-translate-y-0.5 animated-gradient"
           >
             Explore Resources
             <svg
@@ -85,7 +75,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Stats row */}
       <div className="relative z-10 mt-20 grid w-full max-w-2xl grid-cols-3 gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-6 backdrop-blur-sm">
         {[
           { value: "8+", label: "Resources" },
@@ -93,12 +82,8 @@ export default function Home() {
           { value: "∞", label: "Possibilities" },
         ].map((stat) => (
           <div key={stat.label} className="flex flex-col items-center gap-1">
-            <span className="text-2xl font-bold gradient-text sm:text-3xl">
-              {stat.value}
-            </span>
-            <span className="text-xs text-gray-500 sm:text-sm">
-              {stat.label}
-            </span>
+            <span className="text-2xl font-bold gradient-text sm:text-3xl">{stat.value}</span>
+            <span className="text-xs text-gray-500 sm:text-sm">{stat.label}</span>
           </div>
         ))}
       </div>

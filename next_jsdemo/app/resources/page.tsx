@@ -10,18 +10,15 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
     return (
         <section className="mx-auto max-w-6xl px-6 py-16">
-            {/* Header */}
             <div className="mb-12 text-center">
                 <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                    Developer{" "}
-                    <span className="gradient-text">Resources</span>
+                    Developer <span className="gradient-text">Resources</span>
                 </h1>
                 <p className="mt-3 text-gray-400 sm:text-lg">
                     Explore tools and frameworks loved by the community.
                 </p>
             </div>
 
-            {/* Search + Cards (client component) */}
             <SearchBar />
         </section>
     );

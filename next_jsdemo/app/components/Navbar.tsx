@@ -16,17 +16,15 @@ export default function Navbar() {
     return (
         <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0a0a0a]/80 backdrop-blur-xl">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-                {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-500 to-fuchsia-500 text-sm font-bold text-white shadow-lg shadow-violet-500/25">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-amber-700 to-amber-500 text-sm font-bold text-white shadow-lg shadow-amber-700/30">
                         D
                     </span>
-                    <span className="text-lg font-bold text-white tracking-tight group-hover:text-violet-400 transition-colors">
+                    <span className="text-lg font-bold text-white tracking-tight transition-colors group-hover:text-white">
                         DevHub
                     </span>
                 </Link>
 
-                {/* Desktop Links */}
                 <ul className="hidden md:flex items-center gap-1">
                     {links.map((link) => {
                         const isActive = pathname === link.href;
@@ -35,7 +33,7 @@ export default function Navbar() {
                                 <Link
                                     href={link.href}
                                     className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${isActive
-                                            ? "bg-violet-500/15 text-violet-400"
+                                            ? "bg-amber-700/20 text-amber-300"
                                             : "text-gray-400 hover:bg-white/5 hover:text-white"
                                         }`}
                                 >
@@ -46,7 +44,6 @@ export default function Navbar() {
                     })}
                 </ul>
 
-                {/* Mobile Burger */}
                 <button
                     onClick={() => setMobileOpen(!mobileOpen)}
                     className="flex md:hidden flex-col gap-1.5 p-2"
@@ -67,7 +64,6 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile Menu */}
             <div
                 className={`md:hidden overflow-hidden transition-all duration-300 ${mobileOpen ? "max-h-40" : "max-h-0"
                     }`}
@@ -81,7 +77,7 @@ export default function Navbar() {
                                     href={link.href}
                                     onClick={() => setMobileOpen(false)}
                                     className={`block rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${isActive
-                                            ? "bg-violet-500/15 text-violet-400"
+                                            ? "bg-amber-700/20 text-amber-300"
                                             : "text-gray-400 hover:bg-white/5 hover:text-white"
                                         }`}
                                 >
